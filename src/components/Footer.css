@@ -1,23 +1,22 @@
-nav{
-    margin-bottom: 20px;
+footer{
+    margin-top: 20px;
     user-select: none;
     box-sizing: border-box;
     padding: 10px;
     background-color: #0ca678;
     width: 100%;
     height: auto;
-    display: flex;
-    justify-content: space-between;
-    column-gap:5px;
 }
 
-nav > ul{
+footer > ul{
     display: flex;
-    column-gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
     align-items: center;
 }
 
-nav > ul > a > li{
+footer > ul > a > li{
     font-size: 1.2em;
     font-family:monospace;
     border: #099268 solid 2px;
@@ -28,18 +27,11 @@ nav > ul > a > li{
     transition: all 0.2s ease-in-out;
 }
 
-nav > ul > a > li:hover{
+footer > ul > a > li:hover{
     background-color: #0cbc87;
 }
 
-.img{
-    width: 50px;
-    height: 50px;
+footer > p{
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
 }
-
-nav > ul > a > img{
-    border: solid #099268 2px;
-    border-radius: 50%;
-    width: 100%;
-}
-
