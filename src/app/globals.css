@@ -5,6 +5,7 @@ body,html{
 
 a{
     text-decoration: none;
+    color: black;
 }
 a:visited{
     color: black;
@@ -22,5 +23,13 @@ ul{
 }
 
 h1{
+    margin: 0;
+}
+
+h2{
+    margin: 0;
+}
+
+p{
     margin: 0;
 }

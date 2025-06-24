@@ -8,17 +8,23 @@ export default function Games(){
 
             <h1>Choose a game</h1>
             <div className="container">
-                <div className="card">
+                <a href="/games/tic_tac_toe">
+                    <div className="card">
+                        TIC-TAC-TOE
+                    </div>
+                </a>
+                <a href="">
+                    <div className="card">
 
-                </div>
-                <div className="card">
+                    </div>
+                </a>
+                <a href="">
+                    <div className="card">
 
-                </div>
-                <div className="card">
-
-                </div>
+                    </div>
+                </a>
             </div>
-
+            
             <Footer/>
         </>
     )
