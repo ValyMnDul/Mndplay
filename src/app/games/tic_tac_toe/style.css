@@ -6,11 +6,11 @@ span{
 .container{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
     row-gap: 10px;
     height: 100vh;
     justify-content: center;
+    margin: 10px;
 }
 
 .scoreBoard{
@@ -64,7 +64,6 @@ span{
 }
 
 .buttons{
-    margin-bottom: 190px;
     display: flex;
     gap:20px;
 }
@@ -84,3 +83,4 @@ span{
     color:#087f5b;
     font-weight: 600;
 }
+
