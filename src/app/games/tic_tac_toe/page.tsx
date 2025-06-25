@@ -45,11 +45,11 @@ export default function Tic_tac_toe(){
                     if(c1.current.innerHTML==""){
                         if(turn==true){
                             c1.current.innerHTML='X';
-                            turnText.current.innerHTML="O's Turn";
+                            turnText.current.innerHTML="O&apos;s Turn";
                         }
                         else{
                             c1.current.innerHTML='O';
-                            turnText.current.innerHTML="X's Turn";
+                            turnText.current.innerHTML="X&apos;s Turn";
                         }
                         turn=!turn;
                         
@@ -60,11 +60,11 @@ export default function Tic_tac_toe(){
                     if(c2.current.innerHTML==""){
                         if(turn==true){
                             c2.current.innerHTML='X';
-                            turnText.current.innerHTML="O's Turn";
+                            turnText.current.innerHTML="O&apos;s Turn";
                         }
                         else{
                             c2.current.innerHTML='O';
-                            turnText.current.innerHTML="X's Turn";
+                            turnText.current.innerHTML="X&apos;s Turn";
                         }
                         turn=!turn;
                     }
@@ -74,11 +74,11 @@ export default function Tic_tac_toe(){
                     if(c3.current.innerHTML==""){
                         if(turn==true){
                             c3.current.innerHTML='X';
-                            turnText.current.innerHTML="O's Turn";
+                            turnText.current.innerHTML="O&apos;s Turn";
                         }
                         else{
                             c3.current.innerHTML='O';
-                            turnText.current.innerHTML="X's Turn";
+                            turnText.current.innerHTML="X&apos;s Turn";
                         }
                         turn=!turn;
                     }
@@ -88,11 +88,11 @@ export default function Tic_tac_toe(){
                     if(c4.current.innerHTML==""){
                         if(turn==true){
                             c4.current.innerHTML='X';
-                            turnText.current.innerHTML="O's Turn";
+                            turnText.current.innerHTML="O&apos;s Turn";
                         }
                         else{
                             c4.current.innerHTML='O';
-                            turnText.current.innerHTML="X's Turn";
+                            turnText.current.innerHTML="X&apos;s Turn";
                         }
                         turn=!turn;
                     }
@@ -102,11 +102,11 @@ export default function Tic_tac_toe(){
                     if(c5.current.innerHTML==""){
                         if(turn==true){
                             c5.current.innerHTML='X';
-                            turnText.current.innerHTML="O's Turn";
+                            turnText.current.innerHTML="O&apos;s Turn";
                         }
                         else{
                             c5.current.innerHTML='O';
-                            turnText.current.innerHTML="X's Turn";
+                            turnText.current.innerHTML="X&apos;s Turn";
                         }
                         turn=!turn;
                     }
@@ -116,11 +116,11 @@ export default function Tic_tac_toe(){
                     if(c6.current.innerHTML==""){
                         if(turn==true){
                             c6.current.innerHTML='X';
-                            turnText.current.innerHTML="O's Turn";
+                            turnText.current.innerHTML="O&apos;s Turn";
                         }
                         else{
                             c6.current.innerHTML='O';
-                            turnText.current.innerHTML="X's Turn";
+                            turnText.current.innerHTML="X&apos;s Turn";
                         }
                         turn=!turn;
                     }
@@ -130,11 +130,11 @@ export default function Tic_tac_toe(){
                     if(c7.current.innerHTML==""){
                         if(turn==true){
                             c7.current.innerHTML='X';
-                            turnText.current.innerHTML="O's Turn";
+                            turnText.current.innerHTML="O&apos;s Turn";
                         }
                         else{
                             c7.current.innerHTML='O';
-                            turnText.current.innerHTML="X's Turn";
+                            turnText.current.innerHTML="X&apos;s Turn";
                         }
                         turn=!turn;
                     }
@@ -144,11 +144,11 @@ export default function Tic_tac_toe(){
                     if(c8.current.innerHTML==""){
                         if(turn==true){
                             c8.current.innerHTML='X';
-                            turnText.current.innerHTML="O's Turn";
+                            turnText.current.innerHTML="O&apos;s Turn";
                         }
                         else{
                             c8.current.innerHTML='O';
-                            turnText.current.innerHTML="X's Turn";
+                            turnText.current.innerHTML="X&apos;s Turn";
                         }
                         turn=!turn;
                     }
@@ -158,11 +158,11 @@ export default function Tic_tac_toe(){
                     if(c9.current.innerHTML==""){
                         if(turn==true){
                             c9.current.innerHTML='X';
-                            turnText.current.innerHTML="O's Turn";
+                            turnText.current.innerHTML="O&apos;s Turn";
                         }
                         else{
                             c9.current.innerHTML='O';
-                            turnText.current.innerHTML="X's Turn";
+                            turnText.current.innerHTML="X&apos;s Turn";
                         }
                         turn=!turn;
                     }
@@ -252,7 +252,7 @@ export default function Tic_tac_toe(){
                 reset();
             }
             else if(c1.current.innerHTML != '' && c2.current.innerHTML != '' && c3.current.innerHTML != '' && c4.current.innerHTML != '' && c5.current.innerHTML != '' && c6.current.innerHTML != '' && c7.current.innerHTML != '' && c8.current.innerHTML != '' && c9.current.innerHTML != ''){
-                turnText.current.innerHTML = "It's a Tie!";
+                turnText.current.innerHTML = "It&apos;s a Tie!";
                 reset();
             }
         }
@@ -288,7 +288,7 @@ export default function Tic_tac_toe(){
                             oScoreNr=0;
                             xScore.current.innerHTML = "0";
                             oScore.current.innerHTML = "0";  
-                            turnText.current.innerHTML = "X's Turn";
+                            turnText.current.innerHTML = "X&apos;s Turn";
                         }
                     }}>Reset</a>
                     <a href="/games/tic_tac_toe/rules">Rules</a>

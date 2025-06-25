@@ -11,7 +11,7 @@ export default function Navbar(){
             </div> 
             <div>
                 <a href="/profile" className='Link'>Profile</a>
-                <img src="/favicon.ico"></img>
+                <img alt='profileImage' src="/favicon.ico"></img>
             </div>
         </nav>
     )
