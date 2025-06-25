@@ -277,7 +277,7 @@ export default function Tic_tac_toe(){
                     <div ref={c9} onClick={() => Place(9)}></div>
                 </div>
                 <div className="turnBoard">
-                    <p ref={turnText}>X's Turn</p>
+                    <p ref={turnText}>X&apos;s Turn</p>
                 </div>
                 <div className="buttons">
                     <a onClick={()=>{

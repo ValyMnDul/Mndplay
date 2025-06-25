@@ -12,7 +12,7 @@ export default function Rules(){
                 </p>
                 <h2>How to Play:</h2>
                 <ul>
-                    <li>- Players decide who will be "X" and who will be "O".</li>
+                    <li>- Players decide who will be &quot;X&quot; and who will be &quot;O&quot;.</li>
                     <li>- Players take turns placing their mark in an empty square.</li>
                     <li>- The first player to align three of their marks wins.</li>
                     <li>- If all squares are filled and no player has three in a row, the game ends in a draw.</li>
