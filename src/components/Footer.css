@@ -32,6 +32,7 @@ footer > ul > a > li:hover{
 }
 
 footer > p{
+    margin-top: 10px;
     text-align: center;
     font-family:'Courier New', Courier, monospace;
 }

@@ -10,13 +10,13 @@ nav{
     column-gap:5px;
 }
 
-nav > ul{
+nav > div{
     display: flex;
     column-gap: 10px;
     align-items: center;
 }
 
-nav > ul > a > li{
+nav > div > a{
     font-size: 1.2em;
     font-family:monospace;
     border: #099268 solid 2px;
@@ -27,18 +27,14 @@ nav > ul > a > li{
     transition: all 0.2s ease-in-out;
 }
 
-nav > ul > a > li:hover{
+nav > div > a:hover{
     background-color: #0cbc87;
 }
 
-.img{
-    width: 50px;
-    height: 50px;
-}
-
-nav > ul > a > img{
+nav > div > img{
     border: solid #099268 2px;
     border-radius: 50%;
-    width: 100%;
+    width: 50px;
+    height: 50px;
 }
 
