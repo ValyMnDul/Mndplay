@@ -1,3 +1,8 @@
+span{
+    font-size: 0.5em;
+    font-weight: 600
+}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -9,12 +14,14 @@
 }
 
 .scoreBoard{
+    display: flex;
     width: 60%;
     height: 70px;
     display: flex;
     font-size:3.4em;
     justify-content: center;
     align-items: center;
+    color:#087f5b;
 }
 
 .gameBoard{
@@ -41,10 +48,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: #064d36;
 }
 
 .turnBoard{
-    margin-bottom: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,5 +59,28 @@
     height: 70px;
     font-size: 2em;
     font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    color:#087f5b;
+}
+
+.buttons{
+    margin-bottom: 190px;
+    display: flex;
+    gap:20px;
+}
+
+.buttons > a{
+    width: 100px;
+    height: 30px;
+    display: block;
+    font-size: 1.3em;
+    border: 2px #087f5b solid;
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color:#087f5b;
     font-weight: 600;
 }

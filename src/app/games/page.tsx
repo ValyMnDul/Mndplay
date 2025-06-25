@@ -9,7 +9,7 @@ export default function Games(){
             <h1>Choose a game</h1>
             <div className="container">
                 <a href="/games/tic_tac_toe">
-                    <div className="card">
+                    <div className="card" id="ticTacToe">
                         TIC-TAC-TOE
                     </div>
                 </a>

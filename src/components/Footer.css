@@ -8,6 +8,14 @@ footer{
     height: auto;
 }
 
+footer a{
+    color: black;
+}
+
+footer a:visited{
+    color: black;
+}
+
 footer > ul{
     display: flex;
     justify-content: center;
@@ -32,7 +40,7 @@ footer > ul > a > li:hover{
 }
 
 footer > p{
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
-    font-family:'Courier New', Courier, monospace;
+    font-family:'Times New Roman', Times, serif
 }

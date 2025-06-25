@@ -1,4 +1,5 @@
 nav{
+    margin-bottom: 20px;
     user-select: none;
     box-sizing: border-box;
     padding: 10px;
@@ -8,6 +9,14 @@ nav{
     display: flex;
     justify-content: space-between;
     column-gap:5px;
+}
+
+nav a{
+    color: black;
+}
+
+nav a:visited{
+    color: black;
 }
 
 nav > div{

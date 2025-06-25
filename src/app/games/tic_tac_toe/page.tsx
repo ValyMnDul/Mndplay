@@ -24,6 +24,20 @@ export default function Tic_tac_toe(){
     let xScoreNr=0;
     let oScoreNr=0;
 
+    function reset(){
+        if(c1.current && c2.current && c3.current && c4.current && c5.current && c6.current && c7.current && c8.current && c9.current && turnText.current && xScore.current && oScore.current){
+            c1.current.innerHTML = '';
+            c2.current.innerHTML = '';
+            c3.current.innerHTML = '';
+            c4.current.innerHTML = '';
+            c5.current.innerHTML = '';
+            c6.current.innerHTML = '';
+            c7.current.innerHTML = '';
+            c8.current.innerHTML = '';
+            c9.current.innerHTML = '';
+        }
+    }
+
     function Place(input:number){
         if(c1.current && c2.current && c3.current && c4.current && c5.current && c6.current && c7.current && c8.current && c9.current && turnText.current && xScore.current && oScore.current){
             switch(input){
@@ -155,22 +169,7 @@ export default function Tic_tac_toe(){
                     break;
             }
 
-            function reset()
-            {
-                if(c1.current && c2.current && c3.current && c4.current && c5.current && c6.current && c7.current && c8.current && c9.current && turnText.current && xScore.current && oScore.current){
-                    c1.current.innerHTML = '';
-                    c2.current.innerHTML = '';
-                    c3.current.innerHTML = '';
-                    c4.current.innerHTML = '';
-                    c5.current.innerHTML = '';
-                    c6.current.innerHTML = '';
-                    c7.current.innerHTML = '';
-                    c8.current.innerHTML = '';
-                    c9.current.innerHTML = '';
-                    turnText.current.innerHTML = "X's Turn";
-                    turn = true;
-                }
-            }
+            
             
             if(c1.current.innerHTML == 'X' && c2.current.innerHTML == 'X' && c3.current.innerHTML == 'X'){
                 xScoreNr++;
@@ -264,7 +263,7 @@ export default function Tic_tac_toe(){
 
             <div className="container">
                 <div className="scoreBoard">
-                    <p ref={xScore}>0</p>:<p ref={oScore}>0</p>
+                    <span>X&nbsp;</span><p ref={xScore}>0</p>:<p ref={oScore}>0</p><span>&nbsp;O</span>
                 </div>
                 <div className="gameBoard">
                     <div ref={c1} onClick={() => Place(1)}></div>
@@ -280,7 +279,22 @@ export default function Tic_tac_toe(){
                 <div className="turnBoard">
                     <p ref={turnText}>X's Turn</p>
                 </div>
+                <div className="buttons">
+                    <a onClick={()=>{
+                        reset();
+                        turn=true;
+                        if(turnText.current && xScore.current && oScore.current){   
+                            xScoreNr=0;
+                            oScoreNr=0;
+                            xScore.current.innerHTML = "0";
+                            oScore.current.innerHTML = "0";  
+                            turnText.current.innerHTML = "X's Turn";
+                        }
+                    }}>Reset</a>
+                    <a href="/games/tic_tac_toe/rules">Rules</a>
+                </div>
             </div>
+
         </>
     )
 }
