@@ -1936,7 +1936,7 @@ export default function Hangman() {
             </div>
             <div className="lose" ref={lose}>
                 <h1>YOU LOSE!</h1>
-                <p>Sorry, you couldn't guess the word.</p>
+                <p>Sorry, you couldn&apos;t guess the word.</p>
                 <p>The word was: <span>{word}</span></p>
                 <a className="playAgainBtn" onClick={()=>{
                     reset();
