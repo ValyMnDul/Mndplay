@@ -49,3 +49,8 @@ h1{
     background-position: center;
     background-repeat: no-repeat;
 }
+
+#rps{
+    text-align: center;
+    font-size: 1.7em;
+}

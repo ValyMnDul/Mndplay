@@ -1,0 +1,86 @@
+.container{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.letsplay{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
+    color:#087f5b;
+    font-size: 2em;
+    font-weight: 600;
+
+}
+
+.robot{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    column-gap: 20px;
+}
+
+.robot > p{
+    font-size:1.5em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.robot > div{
+    width: 100px;
+    height: 100px;
+    background-color: #e6fcf5;
+    border: solid 2px #96f2d7 ;
+    border-radius: 20px;
+}
+
+
+.buttons{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap:15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons > button{
+    width: 100px;
+    height: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: #e6fcf5;
+    border: solid 2px #96f2d7 ;
+    border-radius: 20px;
+}
+
+.buttons2{
+    margin-top: 50px;
+    display: flex;
+    gap:20px;
+    margin-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons2 > a{
+    width: 100px;
+    height: 30px;
+    display: block;
+    font-size: 1.3em;
+    border: 2px #087f5b solid;
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color:#087f5b;
+    font-weight: 600;
+}
+
+

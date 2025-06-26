@@ -18,9 +18,9 @@ export default function Games(){
                         HANGMAN
                     </div>
                 </a>
-                <a href="">
-                    <div className="card">
-                        SNAKE
+                <a href="/games/rock_paper_scissors">
+                    <div className="card" id="rps">
+                        Rock-Paper Scissors
                     </div>
                 </a>
             </div>

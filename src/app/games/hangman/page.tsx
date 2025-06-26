@@ -136,6 +136,7 @@ export default function Hangman() {
         ];
     const [word, setWord] = useState<string>('');
 
+
     function getWord() {
         const index = Math.floor(Math.random() * words.length);
         return words[index]; 
@@ -144,7 +145,7 @@ export default function Hangman() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(()=>{
         setWord(getWord());
-    });
+    },[]);
 
     function reset() {
 
@@ -226,7 +227,7 @@ export default function Hangman() {
             setWord(newWord);
     }
 
-
+    // Function to handle keyboard clicks
     function keyboardClick(input:string){
         if(c1.current && c2.current && c3.current && c4.current && c5.current && c6.current && c7.current && c8.current && c9.current && c10.current && kq.current && kw.current && ke.current && kr.current && kt.current && ky.current && ku.current && ki.current && ko.current && kp.current && ka.current && ks.current && kd.current && kf.current && kg.current && kh.current && kj.current && kk.current && kl.current && kz.current && kx.current && kc.current && kv.current && kb.current && kn.current && km.current && h1.current && h2.current && h3.current && h4.current && h5.current && h6.current) {
             switch(input) {
