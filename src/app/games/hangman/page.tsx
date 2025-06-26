@@ -130,20 +130,21 @@ export default function Hangman() {
             'tablespoon', 'ultimately', 'vocabulary', 'watermelon', 
             'yellowbird', 'zoological', 'bestseller', 'championed', 
             'drawbridge', 'jackhammer', 'kickboxing', 'landslides', 
-            'microphone', 'noteworthy', 'overlooked', 'paintbrush', 
+            'microphone', 'noteworthy', 'overlooked', 'paintbrush',
             'quarantine', 'researcher', 'smartphone', 'typewriter', 
             'underneath', 'volleyball', 'wheelchair', 'yesteryear'
         ];
     const [word, setWord] = useState<string>('');
 
     function getWord() {
-        let index = Math.floor(Math.random() * words.length);
+        const index = Math.floor(Math.random() * words.length);
         return words[index]; 
     }
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(()=>{
         setWord(getWord());
-    },[]);
+    });
 
     function reset() {
 
