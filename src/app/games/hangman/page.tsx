@@ -50,6 +50,10 @@ export default function Hangman() {
     const kn = useRef<HTMLDivElement>(null);
     const km = useRef<HTMLDivElement>(null);
 
+    const container = useRef<HTMLDivElement>(null);
+    const win = useRef<HTMLDivElement>(null);
+    const lose = useRef<HTMLDivElement>(null);
+
     let kqLock = false;
     let kwLock = false;
     let keLock = false;
@@ -1828,12 +1832,14 @@ export default function Hangman() {
             }
 
             if(c1.current.innerHTML !== '' && c2.current.innerHTML !== '' && c3.current.innerHTML !== '' && c4.current.innerHTML !== '' && c5.current.innerHTML !== '' && c6.current.innerHTML !== '' && c7.current.innerHTML !== '' && c8.current.innerHTML !== '' && c9.current.innerHTML !== '' && c10.current.innerHTML !== '') {
-                alert("Congratulations! You have guessed the word: " + word);
+                if(container.current) container.current.style.display = 'none';
+                if(win.current) win.current.style.display = 'flex';
                 reset();
             }
 
             if (h6.current.classList.contains('used') && h5.current.classList.contains('used') && h4.current.classList.contains('used') && h3.current.classList.contains('used') && h2.current.classList.contains('used') && h1.current.classList.contains('used')) {
-                alert("Game Over! You have used all your hearts.");
+                if(container.current) container.current.style.display = 'none';
+                if(lose.current) lose.current.style.display = 'flex';
                 reset();
             }
 
@@ -1843,7 +1849,29 @@ export default function Hangman() {
     return(
         <>
             <Navbar/>
-            <div className="container">
+            <div className="win" ref={win}>
+                <h1>YOU WIN!</h1>
+                <p>Congratulations! You guessed the word correctly.</p>
+                <p>The word was: <span>{word}</span></p>
+                <a className="playAgainBtn" onClick={()=>{
+                    reset();
+                    if(win.current) win.current.style.display = 'none';
+                    if(lose.current) lose.current.style.display = 'none';
+                    if(container.current) container.current.style.display = 'flex';
+                    }}>Play Again</a>
+            </div>
+            <div className="lose" ref={lose}>
+                <h1>YOU LOSE!</h1>
+                <p>Sorry, you couldn't guess the word.</p>
+                <p>The word was: <span>{word}</span></p>
+                <a className="playAgainBtn" onClick={()=>{
+                    reset();
+                    if(win.current) win.current.style.display = 'none';
+                    if(lose.current) lose.current.style.display = 'none';
+                    if(container.current) container.current.style.display = 'flex';
+                    }}>Play Again</a>
+            </div>
+            <div className="container" ref={container}>
                 <div className="hearts">
                     <p ref={h1}>💚</p>
                     <p ref={h2}>💚</p>

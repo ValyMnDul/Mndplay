@@ -1,3 +1,8 @@
+span{
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: -0.2px;
+}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -100,3 +105,43 @@
     font-weight: 600;
 }
 
+.win,.lose{
+    height: 70vh;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.win > h1,.lose > h1{
+    color:#087f5b;
+    text-align: center;
+    margin: 20px 0;
+    margin-top: 0;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: -1px;
+}
+
+.win > p,.lose >p{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.15em;
+    letter-spacing: 1.2px;
+    margin-top: 10px;
+}
+
+.playAgainBtn{
+    margin-top: 20px;
+    display: flex;
+    border: #087f5b solid 2px;
+    width: 130px;
+    height: 40px;
+    font-size: 1.2em;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color:#087f5b ;
+    font-family:'Courier New', Courier, monospace;
+}
