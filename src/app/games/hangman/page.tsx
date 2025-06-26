@@ -1,5 +1,5 @@
 'use client';
-import { useRef } from "react";
+import { useRef,useState ,useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import "./style.css";
 
@@ -84,81 +84,69 @@ export default function Hangman() {
 
     let find = false;
 
-    let word="";
+    const words = [
+            'abbreviate', 'abolishing', 'accounting', 'allegation', 
+            'allocation', 'apocalyptic', 'arbitrator', 'assessment', 
+            'authorized', 'backpacked', 'barbershop', 'benefactor', 
+            'birthplace', 'blizzarded', 'blueprints', 'bookseller', 
+            'broadcasted', 'campaigner', 'carpentered', 'catapulted', 
+            'celebrated', 'checklists', 'chocolates', 'completion', 
+            'conspiracy', 'consultant', 'continents', 'creativity', 
+            'deactivate', 'deceptions', 'deficiency', 'deliberate', 
+            'dependable', 'deployment', 'descendant', 'designates', 
+            'destructive', 'devastated', 'difficulty', 'diplomatic', 
+            'discourage', 'disrespect', 'documented', 'earthquake', 
+            'economical', 'effortless', 'electrical', 'embroidery', 
+            'emphasized', 'employment', 'encounters', 'endangered', 
+            'enjoyments', 'enterprise', 'everything', 'exaggerate', 
+            'exhausting', 'experience', 'fellowship', 'filmmakers', 
+            'fireproofs', 'fluctuated', 'frameworks', 'friendship', 
+            'frightened', 'fundraiser', 'glistening', 'government', 
+            'greenhouse', 'guidebooks', 'hairpieces', 'handpicked', 
+            'helicopter', 'historical', 'homeowners', 'houseplant', 
+            'icebreaker', 'impression', 'industrial', 'influences', 
+            'integrated', 'journalism', 'keyboardist', 'leadership', 
+            'lighthouse', 'lumberjack', 'mainstream', 'maintenance',
+            'marketable', 'mastermind', 'medication', 'motorcycle', 
+            'networking', 'nightstand', 'newspapers', 'nonchalant', 
+            'opposition', 'opportunity', 'overcharge', 'overcoming', 
+            'overstated', 'parenthood', 'peacekeeper', 'pedestrian', 
+            'perception', 'permanence', 'personally', 'photograph', 
+            'playground', 'population', 'positivity', 'possessing', 
+            'prescribed', 'productive', 'programmer', 'properties', 
+            'providence', 'reflections', 'regardless', 'rehearsing', 
+            'remarkable', 'repurposed', 'resistance', 'restaurant', 
+            'revolution', 'roundabout', 'sandcastle', 'scientific', 
+            'sensations', 'sightseers', 'skateboard', 'spacecraft', 
+            'spectacles', 'standstill', 'strategist', 'streamlined', 
+            'submission', 'successors', 'supervisor', 'suspicious', 
+            'swallowing', 'techniques', 'television', 'threatened', 
+            'understand', 'undertaken', 'university', 'viewpoints', 
+            'volunteers', 'wilderness', 'withstands', 'workplaces', 
+            'youngsters','basketball', 'blackboard', 'California', 
+            'dictionary', 'elementary', 'fingertips', 'goalkeeper', 
+            'hamburgers', 'incredible', 'lampshades', 'nationwide', 
+            'operations', 'penmanship', 'quickening', 'recognized', 
+            'tablespoon', 'ultimately', 'vocabulary', 'watermelon', 
+            'yellowbird', 'zoological', 'bestseller', 'championed', 
+            'drawbridge', 'jackhammer', 'kickboxing', 'landslides', 
+            'microphone', 'noteworthy', 'overlooked', 'paintbrush', 
+            'quarantine', 'researcher', 'smartphone', 'typewriter', 
+            'underneath', 'volleyball', 'wheelchair', 'yesteryear'
+        ];
+    const [word, setWord] = useState<string>('');
 
-
-
-    function GETWORD(){
-        async function generateWord() {
-            const words = [ 
-                'abbreviate', 'abolishing', 'accounting',
-                'allegation', 'allocation', 'apocalyptic',
-                'arbitrator', 'assessment', 'authorized',
-                'backpacked', 'barbershop', 'benefactor',
-                'birthplace', 'blizzarded', 'blueprints', 
-                'bookseller', 'broadcasted', 'campaigner',
-                'carpentered', 'catapulted', 'celebrated',
-                'checklists', 'chocolates', 'completion', 
-                'conspiracy', 'consultant', 'continents', 
-                'creativity', 'deactivate', 'deceptions', 
-                'deficiency', 'deliberate', 'dependable', 
-                'deployment', 'descendant', 'designates', 
-                'destructive', 'devastated', 'difficulty', 
-                'diplomatic', 'discourage', 'disrespect', 
-                'documented', 'earthquake', 'economical', 
-                'effortless', 'electrical', 'embroidery', 
-                'emphasized', 'employment', 'encounters', 
-                'endangered', 'enjoyments', 'enterprise', 
-                'everything', 'exaggerate', 'exhausting', 
-                'experience', 'fellowship', 'filmmakers', 
-                'fireproofs', 'fluctuated', 'frameworks', 
-                'friendship', 'frightened', 'fundraiser', 
-                'glistening', 'government', 'greenhouse', 
-                'guidebooks', 'hairpieces', 'handpicked', 
-                'helicopter', 'historical', 'homeowners', 
-                'houseplant', 'icebreaker', 'impression', 
-                'industrial', 'influences', 'integrated', 
-                'journalism', 'keyboardist', 'leadership', 
-                'lighthouse', 'lumberjack', 'mainstream', 
-                'maintenance', 'marketable', 'mastermind', 
-                'medication', 'motorcycle', 'networking', 
-                'nightstand', 'newspapers', 'nonchalant', 
-                'opposition', 'opportunity', 'overcharge', 
-                'overcoming', 'overstated', 'parenthood', 
-                'peacekeeper', 'pedestrian', 'perception', 
-                'permanence', 'personally', 'photograph', 
-                'playground', 'population', 'positivity', 
-                'possessing', 'prescribed', 'productive', 
-                'programmer', 'properties', 'providence', 
-                'reflections', 'regardless', 'rehearsing',
-                'remarkable', 'repurposed', 'resistance', 
-                'restaurant', 'revolution', 'roundabout', 
-                'sandcastle', 'scientific', 'sensations', 
-                'sightseers', 'skateboard', 'spacecraft', 
-                'spectacles', 'standstill', 'strategist', 
-                'streamlined', 'submission', 'successors', 
-                'supervisor', 'suspicious', 'swallowing', 
-                'techniques', 'television', 'threatened', 
-                'understand', 'undertaken', 'university', 
-                'viewpoints', 'volunteers', 'wilderness', 
-                'withstands', 'workplaces', 'youngsters' 
-            ];
-
-            const randomIndex = Math.floor(Math.random() * words.length);
-            return words[randomIndex];
-        }
-
-        async function getWord() {
-            word = await generateWord();
-        }
-
-        getWord();
+    function getWord() {
+        let index = Math.floor(Math.random() * words.length);
+        return words[index]; 
     }
-    GETWORD();
 
-
+    useEffect(()=>{
+        setWord(getWord());
+    },[]);
 
     function reset() {
+
         if(c1.current && c2.current && c3.current && c4.current && c5.current && c6.current && c7.current && c8.current && c9.current && c10.current) {
             c1.current.innerHTML = '';
             c2.current.innerHTML = '';
@@ -232,7 +220,9 @@ export default function Hangman() {
         if(kb.current) kb.current.classList.remove('used');
         if(kn.current) kn.current.classList.remove('used');
         if(km.current) km.current.classList.remove('used');
-        GETWORD();
+
+            const newWord = getWord();
+            setWord(newWord);
     }
 
 
@@ -1908,17 +1898,16 @@ export default function Hangman() {
             if(c1.current.innerHTML !== '' && c2.current.innerHTML !== '' && c3.current.innerHTML !== '' && c4.current.innerHTML !== '' && c5.current.innerHTML !== '' && c6.current.innerHTML !== '' && c7.current.innerHTML !== '' && c8.current.innerHTML !== '' && c9.current.innerHTML !== '' && c10.current.innerHTML !== '') {
                 if(container.current) container.current.style.display = 'none';
                 if(win.current) win.current.style.display = 'flex';
-                reset();
             }
 
             if (h6.current.classList.contains('used') && h5.current.classList.contains('used') && h4.current.classList.contains('used') && h3.current.classList.contains('used') && h2.current.classList.contains('used') && h1.current.classList.contains('used')) {
                 if(container.current) container.current.style.display = 'none';
                 if(lose.current) lose.current.style.display = 'flex';
-                reset();
             }
 
         }
     }
+    
 
     return(
         <>

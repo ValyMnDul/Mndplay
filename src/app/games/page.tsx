@@ -14,7 +14,7 @@ export default function Games(){
                     </div>
                 </a>
                 <a href="/games/hangman">
-                    <div className="card">
+                    <div className="card" id="hangman">
                         HANGMAN
                     </div>
                 </a>

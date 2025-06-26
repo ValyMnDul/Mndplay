@@ -42,3 +42,10 @@ h1{
     background-position: center;
     background-repeat: no-repeat;
 }
+
+#hangman{
+    background-image: url("/games/hangman.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

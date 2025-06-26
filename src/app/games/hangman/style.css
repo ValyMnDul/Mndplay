@@ -17,8 +17,12 @@ span{
     display: flex;
     font-size: 2em;
     justify-content: center;
-    opacity: 0.8;
+    opacity: 0.6;
+    box-shadow:0 5px 5px #087f5b;
+    border-radius: 20px;
+    padding: 10px;
 }
+
 
 .word{
     font-family: 'Courier New', Courier, monospace;
@@ -80,7 +84,7 @@ span{
 }
 
 .used{
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 .buttons{
