@@ -1,0 +1,102 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    margin: 10px;
+    gap:25px;
+}
+
+.hearts{
+    display: flex;
+    font-size: 2em;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.word{
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    width: 300px;
+    height: 40px;
+}
+
+.word > div{
+    font-size: 2em;
+    border-bottom: #087f5b solid 2px;
+    width: 20px;
+    height: 35px;
+    text-align: center;
+}
+
+.keyboard{
+    box-sizing: border-box;
+    width: 360px;
+    height: 210px;
+    background-color: #c3fae8;
+    border: solid 2px #96f2d7 ;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyboard > .row1{
+    display: flex;
+    column-gap: 8px;
+}
+
+.keyboard > .row2{
+    display: flex;
+    column-gap: 8px;
+}
+
+.keyboard > .row3{
+    display: flex;
+    column-gap: 8px;
+}
+
+.keyboard > .row1 > div,.keyboard > .row2 > div,.keyboard > .row3 > div{
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+    width: 20px;
+    height: 28px;
+    border:#087f5b solid 2px;
+    padding: 0.7px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.used{
+    opacity: 0.3;
+}
+
+.buttons{
+    display: flex;
+    gap:20px;
+    margin-bottom: 80px;
+}
+
+.buttons > a{
+    width: 100px;
+    height: 30px;
+    display: block;
+    font-size: 1.3em;
+    border: 2px #087f5b solid;
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color:#087f5b;
+    font-weight: 600;
+}
+

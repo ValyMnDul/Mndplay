@@ -13,14 +13,14 @@ export default function Games(){
                         TIC-TAC-TOE
                     </div>
                 </a>
-                <a href="">
+                <a href="/games/hangman">
                     <div className="card">
-
+                        HANGMAN
                     </div>
                 </a>
                 <a href="">
                     <div className="card">
-
+                        SNAKE
                     </div>
                 </a>
             </div>
