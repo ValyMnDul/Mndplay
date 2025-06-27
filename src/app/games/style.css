@@ -53,4 +53,8 @@ h1{
 #rps{
     text-align: center;
     font-size: 1.7em;
+    background-image: url("/games/rps.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
