@@ -3,6 +3,62 @@ import { useRef,useState ,useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import "./style.css";
 
+const words = [
+            'abbreviate', 'abolishing', 'accounting', 'allegation', 
+            'allocation', 'apocalyptic', 'arbitrator', 'assessment', 
+            'authorized', 'backpacked', 'barbershop', 'benefactor', 
+            'birthplace', 'blizzarded', 'blueprints', 'bookseller', 
+            'broadcasted', 'campaigner', 'carpentered', 'catapulted', 
+            'celebrated', 'checklists', 'chocolates', 'completion', 
+            'conspiracy', 'consultant', 'continents', 'creativity', 
+            'deactivate', 'deceptions', 'deficiency', 'deliberate', 
+            'dependable', 'deployment', 'descendant', 'designates', 
+            'destructive', 'devastated', 'difficulty', 'diplomatic', 
+            'discourage', 'disrespect', 'documented', 'earthquake', 
+            'economical', 'effortless', 'electrical', 'embroidery', 
+            'emphasized', 'employment', 'encounters', 'endangered', 
+            'enjoyments', 'enterprise', 'everything', 'exaggerate', 
+            'exhausting', 'experience', 'fellowship', 'filmmakers', 
+            'fireproofs', 'fluctuated', 'frameworks', 'friendship', 
+            'frightened', 'fundraiser', 'glistening', 'government', 
+            'greenhouse', 'guidebooks', 'hairpieces', 'handpicked', 
+            'helicopter', 'historical', 'homeowners', 'houseplant', 
+            'icebreaker', 'impression', 'industrial', 'influences', 
+            'integrated', 'journalism', 'keyboardist', 'leadership', 
+            'lighthouse', 'lumberjack', 'mainstream', 'maintenance',
+            'marketable', 'mastermind', 'medication', 'motorcycle', 
+            'networking', 'nightstand', 'newspapers', 'nonchalant', 
+            'opposition', 'opportunity', 'overcharge', 'overcoming', 
+            'overstated', 'parenthood', 'peacekeeper', 'pedestrian', 
+            'perception', 'permanence', 'personally', 'photograph', 
+            'playground', 'population', 'positivity', 'possessing', 
+            'prescribed', 'productive', 'programmer', 'properties', 
+            'providence', 'reflections', 'regardless', 'rehearsing', 
+            'remarkable', 'repurposed', 'resistance', 'restaurant', 
+            'revolution', 'roundabout', 'sandcastle', 'scientific', 
+            'sensations', 'sightseers', 'skateboard', 'spacecraft', 
+            'spectacles', 'standstill', 'strategist', 'streamlined', 
+            'submission', 'successors', 'supervisor', 'suspicious', 
+            'swallowing', 'techniques', 'television', 'threatened', 
+            'understand', 'undertaken', 'university', 'viewpoints', 
+            'volunteers', 'wilderness', 'withstands', 'workplaces', 
+            'youngsters','basketball', 'blackboard', 'California', 
+            'dictionary', 'elementary', 'fingertips', 'goalkeeper', 
+            'hamburgers', 'incredible', 'lampshades', 'nationwide', 
+            'operations', 'penmanship', 'quickening', 'recognized', 
+            'tablespoon', 'ultimately', 'vocabulary', 'watermelon', 
+            'yellowbird', 'zoological', 'bestseller', 'championed', 
+            'drawbridge', 'jackhammer', 'kickboxing', 'landslides', 
+            'microphone', 'noteworthy', 'overlooked', 'paintbrush',
+            'quarantine', 'researcher', 'smartphone', 'typewriter', 
+            'underneath', 'volleyball', 'wheelchair', 'yesteryear'
+];
+
+function getWord() {
+    const index = Math.floor(Math.random() * words.length);
+    return words[index]; 
+}
+
 export default function Hangman() {
 
     const h1 = useRef<HTMLParagraphElement>(null);
@@ -84,65 +140,8 @@ export default function Hangman() {
 
     let find = false;
 
-    const words = [
-            'abbreviate', 'abolishing', 'accounting', 'allegation', 
-            'allocation', 'apocalyptic', 'arbitrator', 'assessment', 
-            'authorized', 'backpacked', 'barbershop', 'benefactor', 
-            'birthplace', 'blizzarded', 'blueprints', 'bookseller', 
-            'broadcasted', 'campaigner', 'carpentered', 'catapulted', 
-            'celebrated', 'checklists', 'chocolates', 'completion', 
-            'conspiracy', 'consultant', 'continents', 'creativity', 
-            'deactivate', 'deceptions', 'deficiency', 'deliberate', 
-            'dependable', 'deployment', 'descendant', 'designates', 
-            'destructive', 'devastated', 'difficulty', 'diplomatic', 
-            'discourage', 'disrespect', 'documented', 'earthquake', 
-            'economical', 'effortless', 'electrical', 'embroidery', 
-            'emphasized', 'employment', 'encounters', 'endangered', 
-            'enjoyments', 'enterprise', 'everything', 'exaggerate', 
-            'exhausting', 'experience', 'fellowship', 'filmmakers', 
-            'fireproofs', 'fluctuated', 'frameworks', 'friendship', 
-            'frightened', 'fundraiser', 'glistening', 'government', 
-            'greenhouse', 'guidebooks', 'hairpieces', 'handpicked', 
-            'helicopter', 'historical', 'homeowners', 'houseplant', 
-            'icebreaker', 'impression', 'industrial', 'influences', 
-            'integrated', 'journalism', 'keyboardist', 'leadership', 
-            'lighthouse', 'lumberjack', 'mainstream', 'maintenance',
-            'marketable', 'mastermind', 'medication', 'motorcycle', 
-            'networking', 'nightstand', 'newspapers', 'nonchalant', 
-            'opposition', 'opportunity', 'overcharge', 'overcoming', 
-            'overstated', 'parenthood', 'peacekeeper', 'pedestrian', 
-            'perception', 'permanence', 'personally', 'photograph', 
-            'playground', 'population', 'positivity', 'possessing', 
-            'prescribed', 'productive', 'programmer', 'properties', 
-            'providence', 'reflections', 'regardless', 'rehearsing', 
-            'remarkable', 'repurposed', 'resistance', 'restaurant', 
-            'revolution', 'roundabout', 'sandcastle', 'scientific', 
-            'sensations', 'sightseers', 'skateboard', 'spacecraft', 
-            'spectacles', 'standstill', 'strategist', 'streamlined', 
-            'submission', 'successors', 'supervisor', 'suspicious', 
-            'swallowing', 'techniques', 'television', 'threatened', 
-            'understand', 'undertaken', 'university', 'viewpoints', 
-            'volunteers', 'wilderness', 'withstands', 'workplaces', 
-            'youngsters','basketball', 'blackboard', 'California', 
-            'dictionary', 'elementary', 'fingertips', 'goalkeeper', 
-            'hamburgers', 'incredible', 'lampshades', 'nationwide', 
-            'operations', 'penmanship', 'quickening', 'recognized', 
-            'tablespoon', 'ultimately', 'vocabulary', 'watermelon', 
-            'yellowbird', 'zoological', 'bestseller', 'championed', 
-            'drawbridge', 'jackhammer', 'kickboxing', 'landslides', 
-            'microphone', 'noteworthy', 'overlooked', 'paintbrush',
-            'quarantine', 'researcher', 'smartphone', 'typewriter', 
-            'underneath', 'volleyball', 'wheelchair', 'yesteryear'
-        ];
     const [word, setWord] = useState<string>('');
 
-
-    function getWord() {
-        const index = Math.floor(Math.random() * words.length);
-        return words[index]; 
-    }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(()=>{
         setWord(getWord());
     },[]);
@@ -227,7 +226,7 @@ export default function Hangman() {
             setWord(newWord);
     }
 
-    // Function to handle keyboard clicks
+
     function keyboardClick(input:string){
         if(c1.current && c2.current && c3.current && c4.current && c5.current && c6.current && c7.current && c8.current && c9.current && c10.current && kq.current && kw.current && ke.current && kr.current && kt.current && ky.current && ku.current && ki.current && ko.current && kp.current && ka.current && ks.current && kd.current && kf.current && kg.current && kh.current && kj.current && kk.current && kl.current && kz.current && kx.current && kc.current && kv.current && kb.current && kn.current && km.current && h1.current && h2.current && h3.current && h4.current && h5.current && h6.current) {
             switch(input) {

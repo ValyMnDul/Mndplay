@@ -26,7 +26,7 @@ export default function Rules(){
                 </ul>
                 <h2>Tips:</h2>
                 <ul>
-                    <li>- Try to predict your opponent's choice based on their previous moves.</li>
+                    <li>- Try to predict your opponent&apos;s choice based on their previous moves.</li>
                     <li>- Mix up your choices to avoid being predictable.</li>
                     <li>- Remember that each option has a counter, so be strategic in your selections.</li>
                 </ul>
