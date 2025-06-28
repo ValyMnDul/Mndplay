@@ -1,0 +1,66 @@
+body{
+    background:linear-gradient(to bottom, #82e2c5, #077453);
+    background-attachment: fixed;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 50px;
+    color:#087f5b;
+    font-size: 2.5em;
+}
+
+.container > form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top:50px;
+}
+
+.container > form > label{
+    font-size: 1.4em;
+    color:#0a5c43;
+    font-weight: 800;
+}
+
+.container > form > input{
+    width: 280px;
+    height: 30px;
+    outline: none;
+    border: #087f5b solid 2px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    text-align: center;
+    color: #005a3f;
+    padding: 2px;
+}
+
+.container > form > button{
+    margin: 20px 0;
+    width: 120px;
+    height: 40px;
+    border: #087f5b solid 2px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    color: #005a3f;
+    font-weight: 600;
+}
+
+.container > p{
+    font-size: 1.2em;
+    color:#004631;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container > p > a{
+    color: #c9ffef;
+}
+
+.container > p > a:visited{
+    color: #c9ffef;
+}
