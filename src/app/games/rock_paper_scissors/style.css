@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     height: 100vh;
+    user-select: none;
 }
 
 .letsplay{
@@ -57,8 +58,6 @@
 .buttons > button{
     width: 100px;
     height: 100px;
-    width: 100px;
-    height: 100px;
     background-color: #e6fcf5;
     border: solid 2px #96f2d7 ;
     border-radius: 20px;
@@ -69,6 +68,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .buttons2{
@@ -94,6 +94,59 @@
     font-family: 'Courier New', Courier, monospace;
     color:#087f5b;
     font-weight: 600;
+    cursor: pointer;
+}
+
+@media screen and (max-width:224px) {
+    .buttons > button{
+        width: 70px;
+        height: 70px;
+        font-size: 2em;
+    }
+
+    .robot >div{
+        width: 70px;
+        height: 70px;
+        font-size: 2em;
+    }
+
+    .buttons2{
+        font-size: .7em;
+    }
+
+    .buttons2 > a{
+        width: 40px;
+        height: 20px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+
+    .letsplay{
+        font-size: 3em;
+    }
+
+    .buttons > button{
+        width: 130px;
+        height: 130px;
+        font-size: 3em;
+    }
+
+    .robot >div{
+        width: 130px;
+        height: 130px;
+        font-size: 3em;
+    }
+
+    .buttons2{
+        font-size: 1.6em;
+        margin-bottom: 300px;
+    }
+
+    .buttons2 > a{
+        width: 100px;
+        height: 30px;
+    }
 }
 
 

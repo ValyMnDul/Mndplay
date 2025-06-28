@@ -11,6 +11,7 @@ span{
     justify-content: center;
     margin: 10px;
     gap:25px;
+    user-select: none;
 }
 
 .hearts{
@@ -81,6 +82,7 @@ span{
     padding: 0.7px;
     border-radius: 6px;
     text-align: center;
+    cursor: pointer;
 }
 
 .used{
@@ -107,6 +109,7 @@ span{
     font-family: 'Courier New', Courier, monospace;
     color:#087f5b;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .win,.lose{
@@ -148,4 +151,108 @@ span{
     border-radius: 10px;
     color:#087f5b ;
     font-family:'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+@media screen and (max-width:362px){
+    .hearts{
+        font-size: 1.5em;
+    }
+
+    .word{
+        width: 280px;
+    }
+
+    .keyboard{
+        width: 300px;
+    }
+
+    .keyboard > .row1 > div,.keyboard > .row2 > div,.keyboard > .row3 > div{
+    font-size: 1.2em;
+    width: 15px;
+    height: 28px;
+    }
+}
+
+@media screen and (max-width:300px){
+    .hearts{
+        font-size: 1.5em;
+    }
+
+    .word{
+        width: 240px;
+    }
+
+    .keyboard{
+        width: 230px;
+    }
+
+    .keyboard > .row1 > div,.keyboard > .row2 > div,.keyboard > .row3 > div{
+        font-size: 1em;
+        width: 12px;
+        height: 20px;
+    }
+
+    .keyboard > .row1{
+        display: flex;
+        column-gap: 4px;
+    }
+
+    .keyboard > .row2{
+        display: flex;
+        column-gap: 4px;
+    }
+
+    .keyboard > .row3{
+        display: flex;
+        column-gap: 4px;
+    }
+
+    .buttons > a{
+        width: 60px;
+        height: 30px;
+    }
+
+}
+
+@media screen and (min-width:1000px) {
+    .hearts{
+        font-size: 3em;
+    }
+
+
+    .keyboard{
+        width: 500px;
+    }
+
+    .keyboard > .row1 > div,.keyboard > .row2 > div,.keyboard > .row3 > div{
+        font-size: 2em;
+        width: 30px;
+        height: 40px;
+    }
+
+    .keyboard > .row1{
+        display: flex;
+        column-gap: 10px;
+    }
+
+    .keyboard > .row2{
+        display: flex;
+        column-gap: 10px;
+    }
+
+    .keyboard > .row3{
+        display: flex;
+        column-gap: 10px;
+    }
+
+    .buttons{
+        margin-bottom: 250px;
+    }
+
+    .buttons > a{
+        width: 100px;
+        height: 40px;
+        font-size: 1.8em;
+    }
 }

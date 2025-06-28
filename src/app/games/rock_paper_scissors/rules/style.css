@@ -67,3 +67,41 @@ h1{
     letter-spacing: 1.2px;
     margin-bottom: 20px;
 }
+
+@media screen and (min-width:500px){
+    .container{
+        margin: 0 100px;
+    }
+}
+
+@media screen and (min-width:700px){
+    .container{
+        margin: 0 150px;
+    }
+}
+
+@media screen and (min-width:1000px){
+    .container{
+        margin: 0 200px;
+    }
+}
+
+@media screen and (min-width:1500px){
+
+    h1{
+        margin: 40px;
+    }
+
+    .container > h2{
+        margin-top: 60px;
+    }
+
+    .container{
+        margin: 0 400px;
+    }
+
+    .doneBtn{
+        margin-top: 50px;
+    }
+}
+

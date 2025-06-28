@@ -1,3 +1,25 @@
+@keyframes title {
+    0%{
+        box-shadow: -5px -10px 10px #11bb88;
+        opacity: .7;
+    }
+
+    33%{
+        box-shadow: -5px 10px 10px #037553;
+        opacity: 1;
+    }
+
+    66%{
+        box-shadow: 5px -10px 10px #037553;
+        opacity: .6;
+    }
+
+    100%{
+        box-shadow: 5px 10px 10px #087f5b;
+        opacity: .9;
+    } 
+}
+
 h1{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
@@ -8,8 +30,10 @@ h1{
 .container{
     margin-top: 20px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap:20px
 }
 
@@ -19,4 +43,43 @@ h1{
     background-color: #e6fcf5;
     border: solid 2px #96f2d7 ;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card p{
+    font-size: 3em;
+    font-family: 'Courier New', Courier, monospace;
+    color: #03553c;
+    font-weight: 700;
+    margin-bottom: 150px;
+    border-radius: 10px;
+    padding: 10px;
+    animation: title ease-in-out 5s infinite alternate;
+}
+
+
+#gamesCard{
+    background-image: url("/games.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width:900px) {
+
+    h1{
+        font-size: 3em;
+    }
+
+    .container{
+        flex-direction: row;
+        column-gap: 100px;
+    }
+
+    .card{
+        width: 480px;
+        height: 635px;
+    }
 }

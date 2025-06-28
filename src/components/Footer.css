@@ -1,3 +1,6 @@
+
+
+
 footer{
     margin-top: 20px;
     user-select: none;
@@ -33,6 +36,7 @@ footer > ul > a > li{
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    text-align: center;
 }
 
 footer > ul > a > li:hover{

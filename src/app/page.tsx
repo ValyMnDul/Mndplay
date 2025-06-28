@@ -9,8 +9,8 @@ export default function Home(){
             
             <h1>MNDPlay</h1>
             <div className="container">
-                <div className="card" onClick={() => window.location.href = "/games"}>
-
+                <div className="card" id="gamesCard" onClick={() => window.location.href = "/games"}>
+                    <p>PLAY!</p>
                 </div>
                 <div className="card">
 
