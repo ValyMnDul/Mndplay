@@ -1,23 +1,32 @@
+
 import { NextResponse } from 'next/server';
+import {writeFileSync, existsSync, promises as fs } from 'fs';
 
 export async function POST(req: Request) {
   const body = await req.json();
   const { username, email, password, cpassword } = body;
 
   if (!username || !email || !password || !cpassword) {
-    return NextResponse.json({ message: 'Toate câmpurile sunt necesare' }, { status: 400 });
+    return NextResponse.json({ message: 'All fields are required' }, { status: 400 });
   }
 
   if (password !== cpassword) {
-    return NextResponse.json({ message: 'Parolele nu se potrivesc' }, { status: 400 });
+    return NextResponse.json({ message: "Passwords don't match" }, { status: 400 });
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    return NextResponse.json({ message: 'Email invalid' }, { status: 400 });
+    return NextResponse.json({ message: 'Invalid email' }, { status: 400 });
   }
 
-  console.log('Utilizator nou:', { username, email });
+  if(!existsSync('./accounts')){
+    fs.mkdir('./accounts');
+  }
 
-  return NextResponse.json({ message: 'Înregistrare cu succes!' }, { status: 200 });
+  global.setTimeout(()=>{
+    writeFileSync(`./accounts/${email}.json`,`{"username":"${username}","email":"${email}","password":"${password}"}`);
+  },1000);
+
+
+  return NextResponse.json({ message: 'Account successfully created.' }, { status: 200 });
 }

@@ -1,7 +1,9 @@
 'use client'
 import './style.css';
 import React, {useState} from 'react';
+import { useRouter } from 'next/navigation';
 export default function Register(){
+    const router=useRouter();
 
     const [form,setForm]=useState({
         username:'',
@@ -10,7 +12,9 @@ export default function Register(){
         cpassword:''
     });
 
-    const change= async (e:React.ChangeEvent<HTMLInputElement>) =>{
+    const [message,setMessage]=useState('');
+
+    const change=(e:React.ChangeEvent<HTMLInputElement>) =>{
         const {id,value}=e.target;
         setForm((p)=>({
             ...p,
@@ -25,7 +29,12 @@ export default function Register(){
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(form),
         });
-        const data=await res.json()
+        const data=await res.json();
+        setMessage(data.message);
+
+        if(data.message=='Account successfully created.'){
+            router.push('/login');
+        }
     }
 
     return(
@@ -60,6 +69,7 @@ export default function Register(){
                 <button type='submit'>Register</button>
                 <br></br>
             </form>
+            <p id='message'>{message}</p>
             <p>Already have an account? <a href="/login">Login here</a></p>
         </div>
     );

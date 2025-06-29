@@ -75,12 +75,33 @@ h1{
     font-weight: 800;
     text-align: center;
     margin-bottom: 20px;
-}
-
+}    
+   
 .container > p > a{
     color: #c9ffef;
 }
 
 .container > p > a:visited{
     color: #c9ffef;
+}
+
+#message{
+    color: rgb(248, 144, 60);
+}
+
+@media screen and (max-width:292px) {
+    .container > form > input{
+        width: 210px;
+    }
+}
+
+@media screen and (max-width:225px) {
+
+    h1{
+        font-size: 1.7em;
+    }
+
+    .container > form > input{
+        width: 100px;
+    }
 }
