@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import {writeFileSync,readFileSync, existsSync, promises as fs } from 'fs';
+import {readFileSync, existsSync} from 'fs';
 export async function POST(req:Request){
     const body=await req.json();
     const {email,password}=body;

@@ -10,7 +10,7 @@ export default function TermsAndConditionsPage() {
                 <h1>Terms and Conditions</h1>
                 <p><strong>Last updated:</strong> June 29, 2025</p>
 
-                <p>Welcome to <strong>mndplay</strong>! These Terms and Conditions ("Terms") govern your use of the website available at <strong>mndplay</strong> (the "Site"). By accessing or using the Site, you agree to be bound by these Terms. If you do not agree with any part of the Terms, you must not use the Site.</p>
+                <p>Welcome to <strong>mndplay</strong>! These Terms and Conditions govern your use of the website available at <strong>mndplay</strong> . By accessing or using the Site, you agree to be bound by these Terms. If you do not agree with any part of the Terms, you must not use the Site.</p>
 
                 <h2>1. About mndplay</h2>
                 <p>mndplay is a simple web-based platform where users can play classic games like Hangman, Rock-Paper-Scissors, and Tic-Tac-Toe. Users can also create a profile to keep track of their scores and achievements. The platform is developed and maintained by a solo developer.</p>
@@ -25,7 +25,7 @@ export default function TermsAndConditionsPage() {
                 <h2>3. Use of the Site</h2>
                 <p>You agree to use mndplay only for personal and non-commercial purposes. You must not:</p>
                 <ul>
-                    <li>Attempt to disrupt or interfere with the site's functionality.</li>
+                    <li>Attempt to disrupt or interfere with the site&apos;s functionality.</li>
                     <li>Use bots, cheats, or other unauthorized tools to gain an advantage.</li>
                     <li>Upload or transmit any harmful or malicious code.</li>
                 </ul>
@@ -37,7 +37,7 @@ export default function TermsAndConditionsPage() {
                 <p>mndplay stores basic profile information and scores for registered users. No sensitive personal information is collected. By using the site, you consent to the collection and use of this data as described.</p>
 
                 <h2>6. Disclaimer</h2>
-                <p>mndplay is provided "as is" without any warranties. While we strive to keep the site running smoothly, we do not guarantee that it will always be error-free or available.</p>
+                <p>mndplay is provided &quot;as is&quot; without any warranties. While we strive to keep the site running smoothly, we do not guarantee that it will always be error-free or available.</p>
 
                 <h2>7. Changes to These Terms</h2>
                 <p>We may update these Terms occasionally. Any changes will be posted ong this page. Continued use of the site after changes means you accept the revised Terms.</p>

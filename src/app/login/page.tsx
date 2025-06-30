@@ -59,7 +59,7 @@ export default function Login(){
                 <button type='submit'>Login</button>
             </form>
             <p id='message'>{message}</p>
-            <p>Don't have an account? <a href="/register">Register here</a></p>
+            <p>Don&apos;t have an account? <a href="/register">Register here</a></p>
             <p>Forgot your password? <a href="/reset-password">Reset it here</a></p>
         </div>
     );
