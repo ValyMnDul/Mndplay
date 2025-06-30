@@ -23,5 +23,4 @@ export async function POST(req:Request){
     else{
         return NextResponse.json({message:"Wrong password"},{status:400})
     }
-    
 }

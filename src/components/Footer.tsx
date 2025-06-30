@@ -1,10 +1,11 @@
+'use client';
 import './Footer.css';
 export default function Footer(){
     return(
         <div>
             <footer>
                 <ul>
-                    <a><li>Terms and Conditions</li></a>
+                    <a href='/terms_and_conditions'><li>Terms and Conditions</li></a>
                     <a><li>Privacy policy</li></a>
                     <a><li>Contact</li></a>
                     <a><li>About</li></a>

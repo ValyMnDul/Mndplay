@@ -1,0 +1,30 @@
+h1{
+    color:#087f5b;
+    text-align: center;
+    margin: 20px 0;
+    margin-top: 0;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: -1px;
+}
+
+.container{
+    margin: 20px;
+}
+
+.container > h2{
+    color:#087f5b;
+    margin: 5px 0;
+    margin-top: 15px;
+}
+
+.container > p{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.15em;
+    letter-spacing: 1.2px;
+}
+
+.container> ul > li{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.15em;
+    letter-spacing: 1.2px;
+}

@@ -35,7 +35,8 @@ export default function Login(){
         setMessage(data.message);
 
         if(data.message=='Login successfully'){
-            router.push('/profile');
+            localStorage.setItem('isLoggedIn', 'true')
+            router.push('/');
         }
         
     }

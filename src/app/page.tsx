@@ -12,8 +12,7 @@ export default function Home(){
                 <div className="card" id="gamesCard" onClick={() => window.location.href = "/games"}>
                     <p>PLAY!</p>
                 </div>
-                <div className="card">
-
+                <div className="card" id="profileCard" onClick={() => window.location.href = "/account"}>
                 </div>
             </div>
 
