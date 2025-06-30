@@ -33,5 +33,5 @@ export default function Rules(){
                 </div>
             </div>
         </>
-    );
-}     
+    )
+}
