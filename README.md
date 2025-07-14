@@ -2,10 +2,6 @@
 
 **MNDPlay** is a beautifully designed web application built with **Next.js**, where you can enjoy a collection of simple yet fun classic games:
 
-- ✖️ Tic Tac Toe  
-- ✊ Rock Paper Scissors  
-- 🔤 Hangman  
-
 ---
 
 ## 🌟 Features
@@ -61,6 +57,9 @@ Guess the hidden word before you run out of tries. A classic brain teaser.
 ## 🛠️ Tech Stack
 
 - **Next.js** – React framework for production  
-- **React** – Component-based UI  
-- **Tailwind CSS** – For sleek, responsive design  
+- **React** – Component-based UI
+- 
+## 📄 Licence
+
+This project is open source and available under the MIT License.
 
