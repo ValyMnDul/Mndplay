@@ -1,8 +1,6 @@
 # 🎮 MNDPlay – Classic Games in One Place
 
-**MNDPlay** is a beautifully designed web application built with **Next.js**, where you can enjoy a collection of simple yet fun classic games:
-
----
+**MNDPlay** is a beautifully designed web application built with **Next.js**, where you can enjoy a collection of simple yet fun classic games!
 
 ## 🌟 Features
 
