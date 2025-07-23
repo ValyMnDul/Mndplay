@@ -56,8 +56,4 @@ Guess the hidden word before you run out of tries. A classic brain teaser.
 
 - **Next.js** – React framework for production  
 - **React** – Component-based UI
-- 
-## 📄 Licence
-
-This project is open source and available under the MIT License.
-
+  
