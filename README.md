@@ -56,4 +56,9 @@ Guess the hidden word before you run out of tries. A classic brain teaser.
 
 - **Next.js** – React framework for production  
 - **React** – Component-based UI
-  
+
+## 📤 Contributing
+
+Pull requests are welcome! If you'd like to contribute or suggest features, feel free to open an issue or fork the repo.
+
+---
